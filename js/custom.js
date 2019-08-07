@@ -1,3 +1,16 @@
+$('#btn-10').click(function(){
+    $('#formulario-ajax').show("fast");
+    $('#formulario-ajax2').hide("slow");
+    document.getElementById('buttons-form').style.marginTop="-25px";
+});
+
+$('#btn-11').click(function(){
+    $('#formulario-ajax2').show("fast");
+    $('#formulario-ajax').hide("slow");
+    document.getElementById('buttons-form').style.marginTop="-25px";
+});
+
+
 //-------------TEXT-ROTATOR-------------
 $(".rotate").textrotator({
     animation: "dissolve",
