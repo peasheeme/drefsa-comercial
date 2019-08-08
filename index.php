@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="Soluciones profesionales en drenaje, fosas sépticas, fugas agua/gas y espacios confinados. Más de 10 años de experiencia sirviendo a la industria y al comercio en Monterrey. ¡Mantenemos Bien lo que haces Bien! ">
+    <meta name="description" content="Soluciones profesionales en drenaje, fosas sépticas, fugas agua/gas y espacios confinados. Más de 10 años de experiencia sirviendo a la industria y al comercio en Monterrey. ¡Mantenemos Bien lo que haces Bien! ">
     <meta name="author" content="Perla Holguín">
     <title> DREFSA | Mtto. de Drenaje Industrial | Servicio Industrial de Drenaje | Descuento en Planes Anuales | Planes
         anuales y semestrales | Manejo de Tuberías Hidráulicas | Plomería Industrial </title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/simpletextrotator.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -28,9 +25,9 @@
 
 <body>
 
-    <a class="button-whatsapp" href="https://api.whatsapp.com/send?phone=528128957827"><i
-            class="fab fa-whatsapp"></i></a>
-
+    <a class="button-whatsapp" href="https://api.whatsapp.com/send?phone=528128957827">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 
     <div class="barra-inf">
@@ -41,6 +38,8 @@
             </div>
         </div>
     </div>
+
+
     <section class="comercial-top">
         <div class="container">
             <div class="row justify-content-center">
@@ -56,9 +55,11 @@
             </div>
         </div>
     </section>
+
+
     <section>
         <div class="container">
-            <nav class="navbar navbar-light ">
+            <nav class="navbar navbar-light">
                 <a class="navbar-brand" href="#">
                     <img src="images/Logo_DREFSA_h.svg" class="img-logo d-inline-block align-top" alt="">
 
@@ -73,6 +74,8 @@
 
         </div>
     </section>
+
+
     <section id="intro" class="relativa-position">
         <!--<img class="img-desc2" src="images/promo_mes.png" alt="promocion de mes">-->
         <div class="container ">
@@ -102,11 +105,11 @@
                             <p class="white" style="text-align: end;">Al programar tu servicio por este medio</p>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6">
-                            <img src="images/Descuento.svg" alt="">
+                            <img src="images/Descuento.svg" alt="Descuento de la empresa">
                         </div>
                     </div>
 
-                    <div class="row justify-content-center"  style="padding: 30px 0 80px 0;">
+                    <div class="row justify-content-center" style="padding: 30px 0 100px 0;">
                         <!--m-300-->
                         <div class="row justify-content-center">
                             <h3 class="white"> Llámanos a los teléfonos:</h3>
@@ -137,7 +140,7 @@
                             <p>
                                 <button id="btn-10" class="btn-1" type="button">Empresarial</button>
                                 <button id="btn-11" class="btn-1" type="button">Residencial</button>
-                                
+
                             </p>
                         </div>
                     </div>
@@ -147,84 +150,79 @@
                             <span id="time" style="font-size: 40px; padding-bottom: 20px; color:white;">05:00</span>
                         </div>-->
 
-                    <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>"
-                        id="formulario-ajax" method="post" role="form" style="display:none;">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax" method="post" role="form" style="display:none;">
                         <div id="mensajeErr-status"></div>
                         <div class="ajax-hidden">
-
 
                             <div class="row ">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
-                                        <input type="text" id="c_name" class="form-control" name="nombre"
-                                            placeholder="Nombre" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_name" class="form-control" name="nombre" placeholder="Nombre" onkeypress="return validarLetras(event);">
                                         <div id="nombre-status" style="color:white;"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
-                                        <input type="text" id="c_name" class="form-control" name="apellido"
-                                            placeholder="Apellido" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_name" class="form-control" name="apellido" placeholder="Apellido" onkeypress="return validarLetras(event);">
                                         <div id="apellido-status" style="color:white;"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_email">E-mail </label>
-                                        <input type="email" id="c_email" class="form-control" name="email"
-                                            placeholder="E-mail" required>
+                                        <input type="email" id="c_email" class="form-control" name="email" placeholder="E-mail" required>
                                         <div id="email-status"></div>
                                     </div>
-
-
                                 </div>
+
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_phone">Teléfono </label>
-                                        <input type="tel" id="c_phone" class="form-control" name="telefono"
-                                            placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
+                                        <input type="tel" id="c_phone" class="form-control" name="telefono" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
                                         <div id="telefono-status"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-6">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Nombre de la empresa</label>
-                                        <input type="text" id="c_name" class="form-control" name="empresa"
-                                            placeholder="Empresa" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_name" class="form-control" name="empresa" placeholder="Empresa" onkeypress="return validarLetras(event);">
                                         <div id="empresa-status" style="color:white;"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_giro">giro</label>
-                                        <input type="text" id="c_giro" class="form-control" name="giro"
-                                            placeholder="Giro Empresarial" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_giro" class="form-control" name="giro" placeholder="Giro Empresarial" onkeypress="return validarLetras(event);">
                                         <div id="giro-status" style="color:white;"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-6 ">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
-                                        <input type="text" id="c_calle" class="form-control" name="calle"
-                                            placeholder="Calle" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_calle" class="form-control" name="calle" placeholder="Calle" onkeypress="return validarLetras(event);">
                                         <div id="calle-status" style="color:white;"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-3  " style="padding-right:5px; padding-left:7px; padding-bottom:0;">
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
-                                        <input type="number" id="c_ext" class="form-control" name="ext"
-                                            placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
+                                        <input type="number" id="c_ext" class="form-control" name="ext" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
                                         <div id="ext-status"></div>
                                     </div>
                                 </div>
+
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="number" id="c_int" class="form-control" name="int"
-                                            placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
+                                        <input type="number" id="c_int" class="form-control" name="int" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
                                         <div id="int-status"></div>
                                     </div>
                                 </div>
@@ -233,8 +231,7 @@
                             <div class="row">
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
-                                    <input type="text" id="c_col" class="form-control" name="colonia"
-                                        placeholder="Colonia" onkeypress="return validarLetras(event);">
+                                    <input type="text" id="c_col" class="form-control" name="colonia" placeholder="Colonia" onkeypress="return validarLetras(event);">
                                     <div id="colonia-status" style="color:white;"></div>
                                 </div>
 
@@ -259,8 +256,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="c_message" name="mensaje" rows="3"
-                                            placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" id="c_message" name="mensaje" rows="3" placeholder="Mensaje"></textarea>
                                         <div id="mensaje-status"></div>
                                     </div>
                                 </div>
@@ -280,125 +276,100 @@
                         </div>
                     </form>
 
-                    <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>"
-                            id="formulario-ajax2" method="post" role="form" style="display:none;">
-                            <div id="mensajeErr-status"></div>
-                            <div class="ajax-hidden">
-    
-    
-                                <div class="row ">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="c_name">Nombre</label>
-                                            <input type="text" id="c_name" class="form-control" name="nombre"
-                                                placeholder="Nombre2" onkeypress="return validarLetras(event);">
-                                            <div id="nombre-status" style="color:white;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6" style="padding-left:7px;">
-                                        <div class="form-group ">
-                                            <label class="sr-only" for="c_name">Apellido</label>
-                                            <input type="text" id="c_name" class="form-control" name="apellido"
-                                                placeholder="Apellido" onkeypress="return validarLetras(event);">
-                                            <div id="apellido-status" style="color:white;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="c_email">E-mail </label>
-                                            <input type="email" id="c_email" class="form-control" name="email"
-                                                placeholder="E-mail" required>
-                                            <div id="email-status"></div>
-                                        </div>
-    
-    
-                                    </div>
-                                    <div class="col-6" style="padding-left:7px;">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="c_phone">Teléfono </label>
-                                            <input type="tel" id="c_phone" class="form-control" name="telefono"
-                                                placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
-                                            <div id="telefono-status"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group ">
-                                            <label class="sr-only" for="c_name">Nombre de la empresa</label>
-                                            <input type="text" id="c_name" class="form-control" name="empresa"
-                                                placeholder="Empresa" onkeypress="return validarLetras(event);">
-                                            <div id="empresa-status" style="color:white;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6" style="padding-left:7px;">
-                                        <div class="form-group ">
-                                            <label class="sr-only" for="c_giro">giro</label>
-                                            <input type="text" id="c_giro" class="form-control" name="giro"
-                                                placeholder="Giro Empresarial" onkeypress="return validarLetras(event);">
-                                            <div id="giro-status" style="color:white;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 ">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="c_calle">Calle</label>
-                                            <input type="text" id="c_calle" class="form-control" name="calle"
-                                                placeholder="Calle" onkeypress="return validarLetras(event);">
-                                            <div id="calle-status" style="color:white;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3  " style="padding-right:5px; padding-left:7px; padding-bottom:0;">
-                                        <div class="">
-                                            <label class="sr-only" for="c_ext">No. Ext.</label>
-                                            <input type="number" id="c_ext" class="form-control" name="ext"
-                                                placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
-                                            <div id="ext-status"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3" style="padding-left:5px;">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="c_int">No. Int </label>
-                                            <input type="number" id="c_int" class="form-control" name="int"
-                                                placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
-                                            <div id="int-status"></div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-6 ">
-                                        <label class="sr-only" for="c_col"> Colonia</label>
-                                        <input type="text" id="c_col" class="form-control" name="colonia"
-                                            placeholder="Colonia" onkeypress="return validarLetras(event);">
-                                        <div id="colonia-status" style="color:white;"></div>
-                                    </div>
-    
-                                    <div class="col-6 form-group" style="padding-left:7px;">
-                                        <select class="technofum-form" name="municipio" placeholder="Municipio">
-                                            <option value="">Municipio</option>
-                                            <option value="Monterrey">Monterrey</option>
-                                            <option value="Guadalupe">Guadalupe</option>
-                                            <option value="Apodaca">Apodaca</option>
-                                            <option value="San Nicolás de los Garza">San Nicolás de los Garza</option>
-                                            <option value="General Escobedo">General Escobedo</option>
-                                            <option value="Santa Catarina">Santa Catarina</option>
-                                            <option value="Benito Juárez">Benito Juárez</option>
-                                            <option value="García">García</option>
-                                            <option value="San Pedro Garza García">San Pedro Garza García</option>
-                                            <option value="Cadereyta Jiménez"> Cadereyta Jiménez</option>
-                                            <option value="Santiago"> Santiago</option>
-                                            <option value="Salinas Victoria"> Salinas Victoria</option>
-                                        </select>
-                                        <div id="municipio-status"></div>
-                                    </div>
-    
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" id="c_message" name="mensaje" rows="3"
-                                                placeholder="Mensaje"></textarea>
-                                            <div id="mensaje-status"></div>
-                                        </div>
+                    <!----------------Formulario 2------------------>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax2" method="post" role="form" style="display:none;">
+                        <div id="mensajeErr2-status"></div>
+                        <div class="ajax-hidden">
+
+
+                            <div class="row ">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="c_name">Nombre</label>
+                                        <input type="text" id="c_name" class="form-control" name="nombre2" placeholder="Nombre" onkeypress="return validarLetras(event);">
+                                        <div id="nombre2-status" style="color:white;"></div>
                                     </div>
                                 </div>
-                                <!--<div class="col-6 form-group " style="padding-left:7px;">
+                                <div class="col-6" style="padding-left:7px;">
+                                    <div class="form-group ">
+                                        <label class="sr-only" for="c_name">Apellido</label>
+                                        <input type="text" id="c_name" class="form-control" name="apellido2" placeholder="Apellido" onkeypress="return validarLetras(event);">
+                                        <div id="apellido2-status" style="color:white;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="c_email">E-mail </label>
+                                        <input type="email" id="c_email" class="form-control" name="email2" placeholder="E-mail" required>
+                                        <div id="email2-status"></div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-6" style="padding-left:7px;">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="c_phone">Teléfono </label>
+                                        <input type="tel" id="c_phone" class="form-control" name="telefono2" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
+                                        <div id="telefono2-status"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6 ">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="c_calle">Calle</label>
+                                        <input type="text" id="c_calle" class="form-control" name="calle2" placeholder="Calle" onkeypress="return validarLetras(event);">
+                                        <div id="calle2-status" style="color:white;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-3  " style="padding-right:5px; padding-left:7px; padding-bottom:0;">
+                                    <div class="">
+                                        <label class="sr-only" for="c_ext">No. Ext.</label>
+                                        <input type="number" id="c_ext" class="form-control" name="ext2" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
+                                        <div id="ext2-status"></div>
+                                    </div>
+                                </div>
+                                <div class="col-3" style="padding-left:5px;">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="c_int">No. Int </label>
+                                        <input type="number" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
+                                        <div id="int2-status"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6 ">
+                                    <label class="sr-only" for="c_col"> Colonia</label>
+                                    <input type="text" id="c_col" class="form-control" name="colonia2" placeholder="Colonia" onkeypress="return validarLetras(event);">
+                                    <div id="colonia2-status" style="color:white;"></div>
+                                </div>
+
+                                <div class="col-6 form-group" style="padding-left:7px;">
+                                    <select class="technofum-form" name="municipio2" placeholder="Municipio">
+                                        <option value="">Municipio</option>
+                                        <option value="Monterrey">Monterrey</option>
+                                        <option value="Guadalupe">Guadalupe</option>
+                                        <option value="Apodaca">Apodaca</option>
+                                        <option value="San Nicolás de los Garza">San Nicolás de los Garza</option>
+                                        <option value="General Escobedo">General Escobedo</option>
+                                        <option value="Santa Catarina">Santa Catarina</option>
+                                        <option value="Benito Juárez">Benito Juárez</option>
+                                        <option value="García">García</option>
+                                        <option value="San Pedro Garza García">San Pedro Garza García</option>
+                                        <option value="Cadereyta Jiménez"> Cadereyta Jiménez</option>
+                                        <option value="Santiago"> Santiago</option>
+                                        <option value="Salinas Victoria"> Salinas Victoria</option>
+                                    </select>
+                                    <div id="municipio2-status"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="c_message" name="mensaje2" rows="3" placeholder="Mensaje"></textarea>
+                                        <div id="mensaje2-status"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-6 form-group " style="padding-left:7px;">
                                             <select class="technofum-form" name="servicio" placeholder="Servicio">
                                             <option value="">Servicio</option>
                                                     <option value="Control de plagas">Control de plagas</option>
@@ -407,15 +378,15 @@
                                                 </select>
                                                 <div id="servicio-status"></div>
                                             </div>-->
-                                <input type="hidden" name="ajax">
-                                <input type="button" value="Solicitar Promoción" id="btn-ajax" class="btn-enviar-cotizar">
-                                <br> <br>
-                            </div>
-                        </form>
+                            <input type="hidden" name="ajax2">
+                            <input type="button" value="Solicitar Promoción" id="btn-ajax2" class="btn-enviar-cotizar">
+                            <br> <br>
+                        </div>
+                    </form>
                     <!-- www.123formbuilder.com script begins here -->
                     <!-- www.123formbuilder.com script begins here <iframe allowTransparency="true" style="min-height:300px; height:inherit; overflow:auto;" width="100%" id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0" src="//www.123formbuilder.com/my-contact-form-4824895.html"><p>Your browser does not support iframes. The contact form cannot be displayed. Please use another contact method (phone, fax etc)</p></iframe><!-- www.123formbuilder.com script ends here -->
 
-
+                    <!----------------Formulario 2------------------>
                 </div>
             </div>
         </div>
@@ -429,7 +400,6 @@
                     <p>Te ofrecemos Soluciones profesionales en:</p>
 
                 </div>
-
             </div>
             <div class="row ventajas-margen">
                 <div class="col-xs-6 col-sm-6 col-md-3 margen-ventajas-mov">
@@ -460,10 +430,6 @@
                     <img src="images/v4.png" alt="Soluciones de Plomería." width="70">
                     <h6 class="white  strong">Soluciones de Plomería. </h6>
 
-
-
-
-
                     <p>Desincrustación de tuberías con baja presión /
                         Ubicación y rastreo de tuberías /
                         Instalación de tuberías de todo tipo (para agua, gas y drenaje).
@@ -472,6 +438,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="ventajas">
         <div class="container ">
@@ -492,7 +459,8 @@
                         <div class="media-body">
                             <h5 class="mt-0"><strong>SOMOS PROFESIONALES</strong></h5>
                             <p>Nuestros técnicos cuentan con capacitación, equipo y herramientas requeridas para
-                                atenderle de manera profesional en su casa, comercio o industria.</p>
+                                atenderle de manera profesional en su casa, comercio o industria.
+                            </p>
 
                         </div>
                     </div>
@@ -504,7 +472,8 @@
                             <h5 class="mt-0"><strong>CONTAMOS CON TECNOLOGÍA</strong></h5>
                             <p>Usamos tecnología de punta para resolver cualquier problema en tuberías de agua, gas,
                                 drenaje o
-                                espacios confinados.</p>
+                                espacios confinados.
+                            </p>
 
                         </div>
                     </div>
@@ -515,7 +484,8 @@
                         <div class="media-body">
                             <h5 class="mt-0"><strong>TRABAJOS GARANTIZADOS</strong></h5>
                             <p>Cada caso es diferente y todo tiene una solución. Le atendemos de manera personal
-                                para asegurarnos que quedará satisfecho con nuestro servicio.</p>
+                                para asegurarnos que quedará satisfecho con nuestro servicio.
+                            </p>
 
                         </div>
                     </div>
@@ -528,11 +498,10 @@
                     <a href="#promocion"><button class="btn-sol">Solicita tu Póliza ahora mismo!</button></a>
                 </div>
             </div>
-
-
         </div>
-
     </section>
+
+
     <section class="clientes">
         <div class="container">
             <div class=" justify-content-center" data-aos="zoom-in">
@@ -560,12 +529,10 @@
                     <img style="width: 100%;  height: auto; " src="images/clientes/9.png" alt="Kalosi">
                 </div>
                 <div class="owl-item" style="padding-left: 5px ;">
-                    <img style="width: 100%;  height: auto; " src="images/clientes/10.jpg"
-                        alt="British American Tobacco">
+                    <img style="width: 100%;  height: auto; " src="images/clientes/10.jpg" alt="British American Tobacco">
                 </div>
                 <div class="owl-item" style="padding-left: 5px ;">
-                    <img style="width: 100%;  height: auto; " src="images/clientes/11.png"
-                        alt="Universidad Regiomontana">
+                    <img style="width: 100%;  height: auto; " src="images/clientes/11.png" alt="Universidad Regiomontana">
                 </div>
                 <div class="owl-item" style="padding-left: 5px ;">
                     <img style="width: 100%;  height: auto; " src="images/clientes/12.png" alt="Sanitarios Lamosa">
@@ -615,12 +582,8 @@
 
             </div>
 
-
-
         </div>
     </section>
-    </section>
-
 
 
     <footer>
@@ -631,26 +594,25 @@
 
                     <p class=" footer-text ">Copyright © DREFSA Drenajes y Fugas 2019, Todos los derechos reservados.
                     </p>
-                    <p class=" footer-text"> <a class="color " href="privacidad.html" target="_blank"> Política de
-                            Privacidad </a>
-                        <a class="color " href="http://www.3e-digital.com/" target="_blank"> | Diseñado por 3e-Digital
-                        </a></p>
+                    <p class=" footer-text">
+                        <a class="color " href="privacidad.html" target="_blank"> Política de
+                            Privacidad
+                        </a>
+                        <a class="color" href="http://www.3e-digital.com/" target="_blank">
+                            | Diseñado por 3e-Digital
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
+
     </footer>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery.js"></script>

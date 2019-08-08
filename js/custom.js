@@ -1,12 +1,21 @@
+$(function(){
+    var buttons = $('#buttons-form button');
+
+    buttons.click(function(){
+        buttons.removeClass('activo');
+        $(this).addClass('activo');
+    });
+});
+
 $('#btn-10').click(function(){
     $('#formulario-ajax').show("fast");
-    $('#formulario-ajax2').hide("slow");
+    $('#formulario-ajax2').hide("swing");
     document.getElementById('buttons-form').style.marginTop="-25px";
 });
 
 $('#btn-11').click(function(){
     $('#formulario-ajax2').show("fast");
-    $('#formulario-ajax').hide("slow");
+    $('#formulario-ajax').hide("swing");
     document.getElementById('buttons-form').style.marginTop="-25px";
 });
 
@@ -29,31 +38,31 @@ singleItem: false
 
 $(function(){
 $("#btn-ajax").click(function(){
-var url = "../mail/ajax.php";
+    var url = "mail/ajax.php";
 
-$.ajax({
-   type:"POST",
-   url: url,
-   data:$("#formulario-ajax").serialize(),
-   success: function(data){
-       
-       $("#nombre-status").html('');
-       $("#apellido-status").html('');
-       $("#email-status").html('');
-       $("#telefono-status").html('');
-       $("#calle-status").html('');
-       $("#ext-status").html('');
-       $("#int-status").html('');
-       $("#colonia-status").html('');
-       $("#municipio-status").html('');
-       $("#fecha-status").html('');
-       $("#servicio-status").html('');
-       $("#mensaje-status").html('');
-       $("#mensajeErr-status").html(data);//muestra los datos del script PHP
-   }
-});
-return false;//evita la recarga de botón
-});
+    $.ajax({
+        type:"POST",
+        url: url,
+        data:$("#formulario-ajax").serialize(),
+        success: function(data){
+            
+                $("#nombre-status").html('');
+                $("#apellido-status").html('');
+                $("#email-status").html('');
+                $("#telefono-status").html('');
+                $("#empresa-status").html('');
+                $("#giro-status").html('');
+                $("#calle-status").html('');
+                $("#ext-status").html('');
+                $("#int-status").html('');
+                $("#colonia-status").html('');
+                $("#municipio-status").html('');
+                $("#mensaje-status").html('');
+                $("#mensajeErr-status").html(data);//muestra los datos del script PHP
+            }
+        });
+    return false;//evita la recarga de botón
+    });
 });
 
 //validar solo letras
