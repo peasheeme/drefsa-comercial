@@ -151,7 +151,7 @@
                         </div>-->
 
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax" method="post" role="form" style="display:none;">
-                        <div id="mensajeErr-status"></div>
+                        <div id="mensajeErr-status" class="correct"></div>
                         <div class="ajax-hidden">
 
                             <div class="row ">
@@ -159,7 +159,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
                                         <input type="text" id="c_name" class="form-control" name="nombre" placeholder="Nombre" onkeypress="return validarLetras(event);">
-                                        <div id="nombre-status" style="color:white;"></div>
+                                        <div id="nombre-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -167,7 +167,7 @@
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
                                         <input type="text" id="c_name" class="form-control" name="apellido" placeholder="Apellido" onkeypress="return validarLetras(event);">
-                                        <div id="apellido-status" style="color:white;"></div>
+                                        <div id="apellido-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -175,7 +175,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_email">E-mail </label>
                                         <input type="email" id="c_email" class="form-control" name="email" placeholder="E-mail" required>
-                                        <div id="email-status"></div>
+                                        <div id="email-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -183,7 +183,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_phone">Teléfono </label>
                                         <input type="tel" id="c_phone" class="form-control" name="telefono" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
-                                        <div id="telefono-status"></div>
+                                        <div id="telefono-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -191,7 +191,7 @@
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Nombre de la empresa</label>
                                         <input type="text" id="c_name" class="form-control" name="empresa" placeholder="Empresa" onkeypress="return validarLetras(event);">
-                                        <div id="empresa-status" style="color:white;"></div>
+                                        <div id="empresa-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -199,7 +199,7 @@
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_giro">giro</label>
                                         <input type="text" id="c_giro" class="form-control" name="giro" placeholder="Giro Empresarial" onkeypress="return validarLetras(event);">
-                                        <div id="giro-status" style="color:white;"></div>
+                                        <div id="giro-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -207,7 +207,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
                                         <input type="text" id="c_calle" class="form-control" name="calle" placeholder="Calle" onkeypress="return validarLetras(event);">
-                                        <div id="calle-status" style="color:white;"></div>
+                                        <div id="calle-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -215,7 +215,7 @@
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
                                         <input type="number" id="c_ext" class="form-control" name="ext" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
-                                        <div id="ext-status"></div>
+                                        <div id="ext-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -223,7 +223,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
                                         <input type="number" id="c_int" class="form-control" name="int" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
-                                        <div id="int-status"></div>
+                                        <div id="int-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -232,7 +232,7 @@
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
                                     <input type="text" id="c_col" class="form-control" name="colonia" placeholder="Colonia" onkeypress="return validarLetras(event);">
-                                    <div id="colonia-status" style="color:white;"></div>
+                                    <div id="colonia-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-6 form-group" style="padding-left:7px;">
@@ -251,13 +251,13 @@
                                         <option value="Santiago"> Santiago</option>
                                         <option value="Salinas Victoria"> Salinas Victoria</option>
                                     </select>
-                                    <div id="municipio-status"></div>
+                                    <div id="municipio-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-group">
                                         <textarea class="form-control" id="c_message" name="mensaje" rows="3" placeholder="Mensaje"></textarea>
-                                        <div id="mensaje-status"></div>
+                                        <div id="mensaje-status" class="status-fields"></div>
                                     </div>
                                 </div>
                             </div>
@@ -287,21 +287,21 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
                                         <input type="text" id="c_name" class="form-control" name="nombre2" placeholder="Nombre" onkeypress="return validarLetras(event);">
-                                        <div id="nombre2-status" style="color:white;"></div>
+                                        <div id="nombre2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
                                         <input type="text" id="c_name" class="form-control" name="apellido2" placeholder="Apellido" onkeypress="return validarLetras(event);">
-                                        <div id="apellido2-status" style="color:white;"></div>
+                                        <div id="apellido2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_email">E-mail </label>
                                         <input type="email" id="c_email" class="form-control" name="email2" placeholder="E-mail" required>
-                                        <div id="email2-status"></div>
+                                        <div id="email2-status" class="status-fields"></div>
                                     </div>
 
 
@@ -310,28 +310,28 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="c_phone">Teléfono </label>
                                         <input type="tel" id="c_phone" class="form-control" name="telefono2" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
-                                        <div id="telefono2-status"></div>
+                                        <div id="telefono2-status" class="status-fields"></div>
                                     </div>
                                 </div>
-                                <div class="col-6 ">
+                                <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
                                         <input type="text" id="c_calle" class="form-control" name="calle2" placeholder="Calle" onkeypress="return validarLetras(event);">
-                                        <div id="calle2-status" style="color:white;"></div>
+                                        <div id="calle2-status" class="status-fields"></div>
                                     </div>
                                 </div>
-                                <div class="col-3  " style="padding-right:5px; padding-left:7px; padding-bottom:0;">
+                                <div class="col-3" style="padding-right:5px; padding-left:7px; padding-bottom:0;">
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
                                         <input type="number" id="c_ext" class="form-control" name="ext2" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
-                                        <div id="ext2-status"></div>
+                                        <div id="ext2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
                                         <input type="number" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
-                                        <div id="int2-status"></div>
+                                        <div id="int2-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
@@ -340,7 +340,7 @@
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
                                     <input type="text" id="c_col" class="form-control" name="colonia2" placeholder="Colonia" onkeypress="return validarLetras(event);">
-                                    <div id="colonia2-status" style="color:white;"></div>
+                                    <div id="colonia2-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-6 form-group" style="padding-left:7px;">
@@ -359,13 +359,13 @@
                                         <option value="Santiago"> Santiago</option>
                                         <option value="Salinas Victoria"> Salinas Victoria</option>
                                     </select>
-                                    <div id="municipio2-status"></div>
+                                    <div id="municipio2-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-group">
                                         <textarea class="form-control" id="c_message" name="mensaje2" rows="3" placeholder="Mensaje"></textarea>
-                                        <div id="mensaje2-status"></div>
+                                        <div id="mensaje2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                             </div>

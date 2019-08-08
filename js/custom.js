@@ -63,6 +63,31 @@ $("#btn-ajax").click(function(){
         });
     return false;//evita la recarga de botón
     });
+
+    $('#btn-ajax2').click(function () { 
+        var url = 'mail/ajax.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $('#formulario-ajax2').serialize(),
+            success: function (data) {
+                $("#nombre2-status").html('');
+                $("#apellido2-status").html('');
+                $("#email2-status").html('');
+                $("#telefono2-status").html('');
+                $("#calle2-status").html('');
+                $("#ext2-status").html('');
+                $("#int2-status").html('');
+                $("#colonia2-status").html('');
+                $("#municipio2-status").html('');
+                $("#mensaje2-status").html('');
+                $("#mensajeErr2-status").html(data);//muestra los datos del script PHP
+            }
+        });
+
+        return false;
+     });
 });
 
 //validar solo letras

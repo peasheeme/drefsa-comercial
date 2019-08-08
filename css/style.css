@@ -212,6 +212,18 @@ h2.text-center {
     padding: 64px 30px 10px 30px;
 }
 
+.correct{
+    background: green;
+    text-align: center;
+}
+
+.status-fields{
+    background: rgba(224, 49, 50, 1);
+    color: white;
+    animation: wow linear 0.5s 4;
+    text-align: center;
+}
+
 h2.cont {
     font-weight: 600;
     font-size: 36px;
