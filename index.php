@@ -81,44 +81,41 @@
         <div class="container ">
             <div class="row">
 
-                <div class="col-xs-12  col-md-6 justify-content-start oculto-1 ">
-                    <div class="row text-inicio justify-content-center">
-                        <p class="white">
-                            Somos los originales especialistas en:
-                        </p>
-                        <h2 class="subt white text-center  ">
-                            <strong> DRENAJES Y FUGAS </strong>
-                        </h2>
+                <div class="col-xs-12  col-md-6 justify-content-start  ">
+                    <div class="row text-inicio justify-content-xs-center ">
+                        
+                        <h4 class="subt white text-center  ">
+                            <strong>  Somos los originales especialistas en:</strong>
+                        </h4>
+                        <img src="images/Logo_drenajes.png" alt="">
 
-                        <p class="white">
+
+                        <h6 class="white mt-20">
                             Te ofrecemos un servicio profesional y personal
-                            <br>
+                           
                             altamente capacitado en las siguientes soluciones:
-                        </p>
+                        </h6>
 
-                        <h3 class="white"><span class="rotate"> Detección y reparación de fugas | Destape y desazolve de drenajes | Instalación de tuberías | Desagüe de fosas sépticas</span></h3>
+                        <h4 class="white mt-20 "><span class="rotate">
+                         Detección y reparación de fugas | Destape y desazolve de drenajes | Instalación de tuberías | Desagüe de fosas sépticas</span></h4>
                     </div>
 
-                    <div class="row justify-content-center">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <h3 style="color:yellow; text-align: end;">!Aprovecha¡</h3>
-                            <p class="white" style="text-align: end;">Al programar tu servicio por este medio</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <img src="images/Descuento.svg" alt="Descuento de la empresa">
-                        </div>
+                    <div class="row justify-content-center mt-20">
+                                           
+                            <img src="images/descuento.png" alt="Descuento de la empresa" width="65%">
+                       
                     </div>
 
-                    <div class="row justify-content-center" style="padding: 30px 0 100px 0;">
+                    <div class="row justify-content-center oculto-1" style="padding: 30px 0 70px 0;">
                         <!--m-300-->
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-xs-center ">
                             <h3 class="white"> Llámanos a los teléfonos:</h3>
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center ">
 
 
                             <a href="tel:8183720322"><button class="btn-1">
-                                    <i class="fas fa-phone"></i> (81) 8372-0322 </button>
+                                    <i class="fas fa-phone"></i> span(81) 8372-0322 </button>
                             </a>
                             <a href="tel:8183740919"> <button class="btn-1"><i class="fas fa-phone"></i> (81)
                                     8374-0919</button>
@@ -129,19 +126,19 @@
                 </div>
                 <div class=" COL-xs-12 contacto col-sm-12 col-md-5 col-lg-5  ml-auto  text-center" id="promocion">
                     <div class="buttons-form" id="buttons-form">
-                        <h2 class="white  ">
-                            <strong> ¡PROGRAMA TU SERVICIO!</strong>
-                        </h2>
+                        <h4 class="white  ">
+                            <strong> ¡PROGRAMA TU SERVICIO AQUÍ! </strong>
+                        </h4 > <H6 class="white" >PARA OBTENER LA PROMOCIÓN!</H6>
                         <img class="img-desc mostrar-1" src="images/desc4.png" alt="">
-                        <p class="white p-30 ">
-                            <strong> ¡Selecciona en donde te atenderemos!</strong>
-                        </p>
+                        <h5 class="white  mt-20">
+                          1. Selecciona el tipo servicio que buscas
+</h5>
                         <div class="row justify-content-center">
-                            <p>
+                         
                                 <button id="btn-10" class="btn-1" type="button">Empresarial</button>
                                 <button id="btn-11" class="btn-1" type="button">Residencial</button>
 
-                            </p>
+                          
                         </div>
                     </div>
 
@@ -151,6 +148,7 @@
                         </div>-->
 
                     <form action="mail/ajax.php" id="formulario-ajax" method="post" role="form" style="display:none;">
+                   
                         <?php
 
                         if (isset($_GET['error'])) :
@@ -212,7 +210,7 @@
 
                         ?>
                         <div class="ajax-hidden">
-
+                       
                             <div class="row ">
                                 <div class="col-6">
                                     <div class="form-group">
