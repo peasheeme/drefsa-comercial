@@ -150,7 +150,7 @@
                             <span id="time" style="font-size: 40px; padding-bottom: 20px; color:white;">05:00</span>
                         </div>-->
 
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax" method="post" role="form" style="display:none;">
+                    <form action="mail/ajax.php" id="formulario-ajax" method="post" role="form" style="display:none;">
                         <div id="mensajeErr-status" class="correct"></div>
                         <div class="ajax-hidden">
 
@@ -158,7 +158,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
-                                        <input type="text" id="c_name" class="form-control" name="nombre" placeholder="Nombre" onkeypress="return validarLetras(event);">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" onblur="destruirAviso(objetos);" id="c_name" class="form-control" name="nombre" placeholder="Nombre"  maxlength="100" minlength="2" required>
                                         <div id="nombre-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
-                                        <input type="text" id="c_name" class="form-control" name="apellido" placeholder="Apellido" onkeypress="return validarLetras(event);">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" id="c_apellido" class="form-control" name="apellido" placeholder="Apellido" maxlength="100" minlength="2">
                                         <div id="apellido-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_email">E-mail </label>
-                                        <input type="email" id="c_email" class="form-control" name="email" placeholder="E-mail" required>
+                                        <input type="email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" onkeyup="this.className = 'campo';" id="c_email" class="form-control" name="email" placeholder="E-mail" required>
                                         <div id="email-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_phone">Teléfono </label>
-                                        <input type="tel" id="c_phone" class="form-control" name="telefono" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
+                                        <input type="tel" id="c_phone" pattern="^[0-9]+" maxlength="15" minlength="8" class="form-control" onkeyup="this.className = 'campo';" name="telefono" placeholder="Teléfono" required>
                                         <div id="telefono-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@
                                 <div class="col-6">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Nombre de la empresa</label>
-                                        <input type="text" id="c_name" class="form-control" name="empresa" placeholder="Empresa" onkeypress="return validarLetras(event);">
+                                        <input type="text"  id="c_empresa" class="form-control" name="empresa" onkeyup="this.className = 'campo';" maxlength="70" minlength="2" placeholder="Empresa">
                                         <div id="empresa-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -198,23 +198,23 @@
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_giro">giro</label>
-                                        <input type="text" id="c_giro" class="form-control" name="giro" placeholder="Giro Empresarial" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_giro" class="form-control" onkeyup="this.className = 'campo';" name="giro" placeholder="Giro Empresarial" maxlength="70" minlength="2">
                                         <div id="giro-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
-                                <div class="col-6 ">
+                                <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
-                                        <input type="text" id="c_calle" class="form-control" name="calle" placeholder="Calle" onkeypress="return validarLetras(event);">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_calle" onkeyup="this.className = 'campo';" class="form-control" maxlength="120" minlength="2" name="calle" placeholder="Calle">
                                         <div id="calle-status" class="status-fields"></div>
                                     </div>
                                 </div>
 
-                                <div class="col-3  " style="padding-right:5px; padding-left:7px; padding-bottom:0;">
+                                <div class="col-3" style="padding-right:5px; padding-left:7px; padding-bottom:0;">
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
-                                        <input type="number" id="c_ext" class="form-control" name="ext" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
+                                        <input type="number" pattern="^[0-9]+" id="c_ext" class="form-control" name="ext" onkeyup="this.className = 'campo';" placeholder="No. Ext." maxlength="15" minlength="8" required>
                                         <div id="ext-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -222,7 +222,7 @@
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="number" id="c_int" class="form-control" name="int" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
+                                        <input type="number" id="c_int" pattern="^[0-9]+" class="form-control" name="int" onkeyup="this.className = 'campo';" placeholder="No. Int." maxlength="50" minlength="2" required>
                                         <div id="int-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -231,12 +231,12 @@
                             <div class="row">
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
-                                    <input type="text" id="c_col" class="form-control" name="colonia" placeholder="Colonia" onkeypress="return validarLetras(event);">
+                                    <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_col" class="form-control" name="colonia" onkeyup="this.className = 'campo';" placeholder="Colonia" maxlength="100" minlength="2">
                                     <div id="colonia-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-6 form-group" style="padding-left:7px;">
-                                    <select class="technofum-form" name="municipio" placeholder="Municipio">
+                                    <select class="technofum-form" name="municipio" placeholder="Municipio" required>
                                         <option value="">Municipio</option>
                                         <option value="Monterrey">Monterrey</option>
                                         <option value="Guadalupe">Guadalupe</option>
@@ -256,7 +256,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="c_message" name="mensaje" rows="3" placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" maxlength="500" minlength="5" onkeyup="this.className = 'campo';" id="c_message" name="mensaje" rows="3" placeholder="Mensaje"></textarea>
                                         <div id="mensaje-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -270,8 +270,8 @@
                                             </select>
                                             <div id="servicio-status"></div>
                                         </div>-->
-                            <input type="hidden" name="ajax">
-                            <input type="button" value="Solicitar Promoción" id="btn-ajax" class="btn-enviar-cotizar">
+                            
+                            <input type="submit" value="Solicitar Promoción" id="btn-ajax" class="btn-enviar-cotizar">
                             <br> <br>
                         </div>
                     </form>

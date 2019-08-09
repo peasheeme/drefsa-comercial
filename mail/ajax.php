@@ -1,10 +1,7 @@
 <?php
 
-error_reporting(0);
-
-$msjStatus = null;
 //expresión letras y números: /^[a-zA-Z\s0-9]*$/
-if(isset($_POST['ajax'])){
+if(isset($_POST)){
 	$nombre=htmlspecialchars($_POST['nombre']);
 	$apellido=htmlspecialchars($_POST['apellido']);
 	$email=htmlspecialchars($_POST['email']);
@@ -18,134 +15,106 @@ if(isset($_POST['ajax'])){
 	$municipio=htmlspecialchars($_POST['municipio']);
 	$mensaje=htmlspecialchars($_POST['mensaje']);
 
-	//validar campo nombre
-	if($nombre == ""){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
+	$error = "faltan_valores";
+
+	if ($nombre && $apellido && $email && $telefono && $empresa && $giroEmpresarial
+		&& $calle && $ext && $int && $colonia && $municipio && $mensaje
+	) {
+		$error = "ok";
+		if (!is_int($nombre) || !is_numeric($nombre) && !empty($nombre) && strlen($nombre) > 2 && strlen($nombre) < 100) {
+			$validate_name = true;
+		} else {
+			$validate_name = false;
+			$error = "nombre";
+		}
+
+		if (!is_int($apellido) || !is_numeric($apellido) && !empty($apellido) && strlen($apellido) > 2 && strlen($apellido) < 100) {
+			$validate_name = true;
+		} else {
+			$validate_name = false;
+			$error = "apellido";
+		}
+
+		if (filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($email) > 2 && strlen($email) < 150 && !empty($email)) {
+			$validate_email = true;
+		} else {
+			$validate_email = false;
+			$error = "email";
+		}
+
+		if($telefono == "" && preg_match("/^[0-9]+$/", $telefono)){
+			$validate_phone = true;
+		}else{
+			$validate_phone = false;
+			$error = "telefono";
+		}
+
+		if (!is_int($empresa) || !is_numeric($empresa) && !empty($empresa) && strlen($empresa) > 2 && strlen($empresa) < 100) {
+			$validate_empresa = true;
+		} else {
+			$validate_empresa = false;
+			$error = "empresa";
+		}
+
+		if (!is_int($giroEmpresarial) || !is_numeric($giroEmpresarial) && !empty($giroEmpresarial) && strlen($giroEmpresarial) > 2 && strlen($giroEmpresarial) < 100) {
+			$validate_giro = true;
+		} else {
+			$validate_giro = false;
+			$error = "giro";
+		}
+
+		if (!is_int($calle) || !is_numeric($calle) && !empty($calle) && strlen($calle) > 2 && strlen($calle) < 100) {
+			$validate_calle = true;
+		} else {
+			$validate_calle = false;
+			$error = "calle";
+		}
+
+		if($ext == "" && preg_match("/^[0-9]+$/", $ext)){
+			$validate_ext = true;
+		}else{
+			$validate_ext = false;
+			$error = "ext";
+		}
+
+		if($int == "" && preg_match("/^[0-9]+$/", $int)){
+			$validate_int = true;
+		}else{
+			$validate_int = false;
+			$error = "int";
+		}
+
+		if (!is_int($colonia) || !is_numeric($colonia) && !empty($colonia) && strlen($colonia) > 2 && strlen($colonia) < 100) {
+			$validate_colonia = true;
+		} else {
+			$validate_colonia = false;
+			$error = "colonia";
+		}
+
+		if (!is_int($municipio) || !is_numeric($municipio) && !empty($municipio) && strlen($municipio) > 2 && strlen($municipio) < 100) {
+			$validate_municipio= true;
+		} else {
+			$validate_municipio = false;
+			$error = "nombre";
+		}
+
+		if (strlen($message) > 2 && strlen($message) < 500 && !empty($message)) {
+			$validate_message = true;
+		} else {
+			$validate_message = false;
+			$error = "message";
+		}
 	}
 
-	elseif(!preg_match('/^[a-záéóóúàèìòùäëïöüñ\s]+$/i', $nombre)){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML = 'No se admiten n&uacute;meros en este campo';</script>";
+	else {
+		$error = "faltan_valores";
+		header("Location:../index.php?error=$error");
 	}
 
-	elseif(!is_string($nombre)){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML = 'Ingrese solo texto';</script>";
-	}
+	if ($error != "ok") {
+		header("Location:../index.php?error=" . $error);
+	}elseif($error == "ok"){
 
-	elseif(strlen($nombre)<2){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML = 'M&iacute;nimo permitido 2 caracteres';</script>";
-	}
-
-	elseif(strlen($nombre)>60){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML = 'M&aacute;ximo permitido 60 caracteres';</script>";
-	}
-	//validar campo apellido
-	elseif($apellido == ""){
-		$msjStatus = "<script>document.getElementById('apellido-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	elseif(!preg_match('/^[a-záéóóúàèìòùäëïöüñ\s]+$/i', $apellido)){
-		$msjStatus = "<script>document.getElementById('apellido-status').innerHTML = 'No se admiten n&uacute;meros en este campo';</script>";
-	}
-
-	elseif(!is_string($apellido)){
-		$msjStatus = "<script>document.getElementById('apellido-status').innerHTML = 'Ingrese solo texto';</script>";
-	}
-
-	elseif(strlen($apellido)<2){
-		$msjStatus = "<script>document.getElementById('apellido-status').innerHTML = 'M&iacute;nimo permitido 2 caracteres';</script>";
-	}
-
-	elseif(strlen($apellido)>100){
-		$msjStatus = "<script>document.getElementById('apellido-status').innerHTML = 'M&aacute;ximo permitido 100 caracteres';</script>";
-	}
-
-	//validar campo email
-	elseif($email == ""){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML = 'Introduce un correo v&aacute;lido';</script>";
-	}
-
-	/*elseif(!preg_match('/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/', $email)){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML = 'Introduce un correo v&aacute;lido';</script>";
-	}*/
-
-	//validar campo teléfono
-	elseif($telefono == ""){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	elseif(!preg_match("/^[0-9]+$/", $telefono)){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML = 'No se admiten letras en este campo';</script>";
-	}
-
-	//validar campo empresa
-	elseif($empresa == ""){
-		$msjStatus = "<script>document.getElementById('empresa-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	elseif(strlen($empresa)<2){
-		$msjStatus = "<script>document.getElementById('empresa-status').innerHTML = 'M&iacute;nimo permitido 2 caracteres';</script>";
-	}
-
-	elseif(strlen($empresa)>100){
-		$msjStatus = "<script>document.getElementById('empresa-status').innerHTML = 'M&aacute;ximo permitido 100 caracteres';</script>";
-	}
-
-	//validar campo giro Empresarial
-	elseif($giroEmpresarial == ""){
-		$msjStatus = "<script>document.getElementById('giro-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	elseif(strlen($giroEmpresarial)<2){
-		$msjStatus = "<script>document.getElementById('giro-status').innerHTML = 'M&iacute;nimo permitido 2 caracteres';</script>";
-	}
-
-	elseif(strlen($giroEmpresarial)>100){
-		$msjStatus = "<script>document.getElementById('giro-status').innerHTML = 'M&aacute;ximo permitido 100 caracteres';</script>";
-	}
-
-	//validar campo calle
-	elseif($calle == ""){
-		$msjStatus = "<script>document.getElementById('calle-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-	elseif(!is_string($calle)){
-		$msjStatus = "<script>document.getElementById('calle-status').innerHTML = 'Solo se admiten letras';</script>";
-	}
-
-	//validar campo numero Exterior
-	elseif($ext == ""){
-		$msjStatus = "<script>document.getElementById('ext-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	
-	//validar campo numero interior
-	elseif($int == ""){
-		$msjStatus = "<script>document.getElementById('int-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	//validar campo colonia
-	elseif($colonia == ""){
-		$msjStatus = "<script>document.getElementById('colonia-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-	
-	//validar las opciones del select Municipio
-	elseif($municipio==""){
-		$msjStatus = "<script>document.getElementById('municipio-status').innerHTML = 'Debe seleccionar una opci&oacute;n';</script>";
-	}
-	
-	//validar mensaje
-	elseif($mensaje == ""){
-		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML = 'El campo est&aacute; vac&iacute;o';</script>";
-	}
-
-	/*elseif(!preg_match("/^[a-zA-ZáéíóúÁÉÍÓÚ\s]*$/", $mensaje)){
-		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML = 'No se admiten caracteres especiales';</script>";
-	}*/
-
-	else{
 		//asunto
 		$asunto="10% Control de plaga Residencial";
 
@@ -197,7 +166,7 @@ if(isset($_POST['ajax'])){
 		$envio = mail($destino, $asunto, $contenido, $headers);
 
 		if($envio){
-			echo "Enviado exitosamente";
+			header("Location:../index.php?enviado=Enviado correctamente");
 			//Enviando autorespuesta
 			$pwf_header = "info@drenajesyfugas.com\n"
 			."Reply-to: info@drenajesyfugas.com \n";
@@ -213,7 +182,7 @@ if(isset($_POST['ajax'])){
 			."Atte: DREFSA Mtto. de Drenaje Industrial \n";
 			@mail($pwf_dirigido_a, $pwf_asunto, $pwf_mensaje, $pwf_header);
 		}else{
-			echo "Falló el envío";
+			header("Location:../index.php?error=Inténtelo de nuevo en unos momentos");
 		}
 	}
 }

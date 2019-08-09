@@ -1,3 +1,6 @@
+
+
+/********************función de botones************************ */
 $(function(){
     var buttons = $('#buttons-form button');
 
@@ -36,7 +39,7 @@ singleItem: false
 });
 //-------------FORMULARIOS-------------
 
-$(function(){
+/*$(function(){
 $("#btn-ajax").click(function(){
     var url = "mail/ajax.php";
 
@@ -88,7 +91,7 @@ $("#btn-ajax").click(function(){
 
         return false;
      });
-});
+});*/
 
 //validar solo letras
 function validarLetras(e){

@@ -212,6 +212,95 @@ h2.text-center {
     padding: 64px 30px 10px 30px;
 }
 
+.campo{
+	display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.campo:invalid{
+	border: 1px solid red;
+}
+.campo:invalid{
+	border: 1px solid red;
+}
+.campo:valid{
+	border: 2px solid green;
+}
+.campo:valid{
+	border: 2px solid green;
+}
+.campo:invalid + span::after{
+	content: url(../images/error.png);
+}
+
+.campo:valid + span::after{
+	content: url(../images/exito.png);
+}
+
+.error-msj{
+	position: absolute;
+	width: 150px;
+	height: auto;
+	padding: 5px;
+	background-color: red;
+	color: #222;
+	border-radius: 5px;
+	left: 502px;
+	font-size: 12px;
+	animation: resaltar 0.2s linear 4;
+}
+
+@-moz-keyframes resaltar{
+	0%{
+		transform: translateY(-10);
+	}
+
+	50%{
+		transform: translateY(+10);
+	}
+
+	100%{
+		transform: translateY(-10);
+	}
+}
+
+@-webkit-keyframes resaltar{
+	0%{
+		transform: translateY(-10);
+	}
+
+	50%{
+		transform: translateY(+10);
+	}
+
+	100%{
+		transform: translateY(-10);
+	}
+}
+
+@keyframes resaltar{
+	0%{
+		transform: translateY(-10);
+	}
+
+	50%{
+		transform: translateY(+10);
+	}
+
+	100%{
+		transform: translateY(-10);
+	}
+}
+
 .correct{
     background: green;
     text-align: center;
