@@ -96,7 +96,7 @@
                             altamente capacitado en las siguientes soluciones:
                         </p>
 
-                        <h3 class="white">Detección y reparación de fugas</h3>
+                        <h3 class="white"><span class="rotate"> Detección y reparación de fugas | Destape y desazolve de drenajes | Instalación de tuberías | Desagüe de fosas sépticas</span></h3>
                     </div>
 
                     <div class="row justify-content-center">
@@ -151,14 +151,73 @@
                         </div>-->
 
                     <form action="mail/ajax.php" id="formulario-ajax" method="post" role="form" style="display:none;">
-                        <div id="mensajeErr-status" class="correct"></div>
+                        <?php
+
+                        if (isset($_GET['error'])) :
+                            $error = $_GET['error'];
+
+                            if ($error == "faltan_valores") :
+                                echo "<h5  style='color:red;'>Porfavor, Introduce bien los datos</h5>";
+
+
+                            elseif ($error == "nombre") :
+                                echo "<h5 style='color:red;'>Nombre no válido</h5>";
+
+
+                            elseif ($error == "apellido") :
+                                echo "<h5 style='color:red;'>Apellido no válido</h5>";
+
+
+                            elseif ($error == "email") :
+                                echo "<h5 style='color:red;'>E-mail no válido</h5>";
+
+
+                            elseif ($error == "telefono") :
+                                echo "<h5 style='color:red;'>Teléfono no válido</h5>";
+
+
+                            elseif ($error == "empresa") :
+                                echo "<h5 style='color:red;'>Empresa no válida</h5>";
+
+
+                            elseif ($error == "giro") :
+                                echo "<h5 style='color:red;'>Giro Empresarial no válido</h5>";
+
+
+                            elseif ($error == "calle") :
+                                echo "<h5 style='color:red;'>Calle no válida</h5>";
+
+                            elseif ($error == "ext") :
+                                echo "<h5 style='color:red;'>Número exterior no válido</h5>";
+
+
+                            elseif ($error == "int") :
+                                echo "<h5 style='color:red;'>Número interior no válido</h5>";
+
+
+                            elseif ($error == "colonia") :
+                                echo "<h5 style='color:red;'>Colonia no válida</h5>";
+
+
+                            elseif ($error == "municipio") :
+                                echo "<h5 style='color:red;'>Municipio no válido</h5>";
+
+
+                            elseif ($error == "mensaje") :
+                                echo "<h5 style='color:red;'>Mensaje no válido</h5>";
+
+
+                            endif;
+                        endif;
+
+                        ?>
                         <div class="ajax-hidden">
 
                             <div class="row ">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
-                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" onblur="destruirAviso(objetos);" id="c_name" class="form-control" name="nombre" placeholder="Nombre"  maxlength="100" minlength="2" required>
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" id="c_name" class="form-control" name="nombre" placeholder="Nombre" maxlength="100" minlength="2" required>
                                         <div id="nombre-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -166,7 +225,7 @@
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
-                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" id="c_apellido" class="form-control" name="apellido" placeholder="Apellido" maxlength="100" minlength="2">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" id="c_apellido" class="form-control" name="apellido" placeholder="Apellido" maxlength="100" minlength="2" required>
                                         <div id="apellido-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -190,7 +249,7 @@
                                 <div class="col-6">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Nombre de la empresa</label>
-                                        <input type="text"  id="c_empresa" class="form-control" name="empresa" onkeyup="this.className = 'campo';" maxlength="70" minlength="2" placeholder="Empresa">
+                                        <input type="text" id="c_empresa" class="form-control" name="empresa" onkeyup="this.className = 'campo';" maxlength="70" minlength="2" placeholder="Empresa" required>
                                         <div id="empresa-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -198,7 +257,7 @@
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_giro">giro</label>
-                                        <input type="text" id="c_giro" class="form-control" onkeyup="this.className = 'campo';" name="giro" placeholder="Giro Empresarial" maxlength="70" minlength="2">
+                                        <input type="text" id="c_giro" class="form-control" onkeyup="this.className = 'campo';" name="giro" placeholder="Giro Empresarial" maxlength="70" minlength="2" required>
                                         <div id="giro-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -206,7 +265,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
-                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_calle" onkeyup="this.className = 'campo';" class="form-control" maxlength="120" minlength="2" name="calle" placeholder="Calle">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_calle" onkeyup="this.className = 'campo';" class="form-control" maxlength="120" minlength="2" name="calle" placeholder="Calle" required>
                                         <div id="calle-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -214,7 +273,7 @@
                                 <div class="col-3" style="padding-right:5px; padding-left:7px; padding-bottom:0;">
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
-                                        <input type="number" pattern="^[0-9]+" id="c_ext" class="form-control" name="ext" onkeyup="this.className = 'campo';" placeholder="No. Ext." maxlength="15" minlength="8" required>
+                                        <input type="text" pattern="^[0-9]+" id="c_ext" class="form-control" name="ext" onkeyup="this.className = 'campo';" placeholder="No. Ext." maxlength="15" minlength="2" required>
                                         <div id="ext-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -222,7 +281,7 @@
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="number" id="c_int" pattern="^[0-9]+" class="form-control" name="int" onkeyup="this.className = 'campo';" placeholder="No. Int." maxlength="50" minlength="2" required>
+                                        <input type="text" id="c_int" pattern="^[0-9]+" class="form-control" name="int" onkeyup="this.className = 'campo';" placeholder="No. Int." maxlength="50" minlength="2" required>
                                         <div id="int-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -231,7 +290,7 @@
                             <div class="row">
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
-                                    <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_col" class="form-control" name="colonia" onkeyup="this.className = 'campo';" placeholder="Colonia" maxlength="100" minlength="2">
+                                    <input type="text" pattern="[A-Za-z-áéíóú\s]+" id="c_col" class="form-control" name="colonia" onkeyup="this.className = 'campo';" placeholder="Colonia" maxlength="100" minlength="2" required>
                                     <div id="colonia-status" class="status-fields"></div>
                                 </div>
 
@@ -256,7 +315,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" maxlength="500" minlength="5" onkeyup="this.className = 'campo';" id="c_message" name="mensaje" rows="3" placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" maxlength="500" minlength="5" onkeyup="this.className = 'campo';" id="c_message" name="mensaje" rows="3" placeholder="Mensaje" required></textarea>
                                         <div id="mensaje-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -270,14 +329,56 @@
                                             </select>
                                             <div id="servicio-status"></div>
                                         </div>-->
-                            
+
                             <input type="submit" value="Solicitar Promoción" id="btn-ajax" class="btn-enviar-cotizar">
                             <br> <br>
                         </div>
                     </form>
 
                     <!----------------Formulario 2------------------>
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax2" method="post" role="form" style="display:none;">
+                    <form action="mail/ajax.php" id="formulario-ajax2" method="post" role="form" style="display:none;">
+                        <?php
+
+                        if (isset($_GET['error2'])) :
+                            $error = $_GET['error2'];
+
+                            if ($error == "faltan_valores") :
+                                echo "<h5  style='color:red;'>Porfavor, Introduce bien los datos</h5>";
+
+                            elseif ($error == "nombre2") :
+                                echo "<h5 style='color:red;'>Nombre no válido</h5>";
+
+                            elseif ($error == "apellido2") :
+                                echo "<h5 style='color:red;'>Apellido no válido</h5>";
+
+                            elseif ($error == "email2") :
+                                echo "<h5 style='color:red;'>E-mail no válido</h5>";
+
+                            elseif ($error == "telefono2") :
+                                echo "<h5 style='color:red;'>Teléfono no válido</h5>";
+
+                            elseif ($error == "calle2") :
+                                echo "<h5 style='color:red;'>Calle no válida</h5>";
+
+                            elseif ($error == "ext2") :
+                                echo "<h5 style='color:red;'>Número exterior no válido</h5>";
+
+                            elseif ($error == "int2") :
+                                echo "<h5 style='color:red;'>Número interior no válido</h5>";
+
+                            elseif ($error == "colonia2") :
+                                echo "<h5 style='color:red;'>Colonia no válida</h5>";
+
+                            elseif ($error == "municipio2") :
+                                echo "<h5 style='color:red;'>Municipio no válido</h5>";
+
+                            elseif ($error == "mensaje2") :
+                                echo "<h5 style='color:red;'>Mensaje no válido</h5>";
+
+                            endif;
+                        endif;
+
+                        ?>
                         <div id="mensajeErr2-status"></div>
                         <div class="ajax-hidden">
 
@@ -286,51 +387,49 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_name">Nombre</label>
-                                        <input type="text" id="c_name" class="form-control" name="nombre2" placeholder="Nombre" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_name" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" class="form-control" name="nombre2" placeholder="Nombre" onkeypress="return validarLetras(event);">
                                         <div id="nombre2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group ">
                                         <label class="sr-only" for="c_name">Apellido</label>
-                                        <input type="text" id="c_name" class="form-control" name="apellido2" placeholder="Apellido" onkeypress="return validarLetras(event);">
+                                        <input type="text" id="c_apellido" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" class="form-control" name="apellido2" placeholder="Apellido" onkeypress="return validarLetras(event);">
                                         <div id="apellido2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_email">E-mail </label>
-                                        <input type="email" id="c_email" class="form-control" name="email2" placeholder="E-mail" required>
+                                        <input type="email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" onkeyup="this.className = 'campo';" id="c_email" class="form-control" name="email2" placeholder="E-mail" required>
                                         <div id="email2-status" class="status-fields"></div>
                                     </div>
-
-
                                 </div>
                                 <div class="col-6" style="padding-left:7px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_phone">Teléfono </label>
-                                        <input type="tel" id="c_phone" class="form-control" name="telefono2" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
+                                        <input type="tel" id="c_phone" pattern="^[0-9]+" maxlength="15" minlength="8" class="form-control" onkeyup="this.className = 'campo';" name="telefono2" placeholder="Teléfono" onkeypress="return soloNumeros(event);" required>
                                         <div id="telefono2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_calle">Calle</label>
-                                        <input type="text" id="c_calle" class="form-control" name="calle2" placeholder="Calle" onkeypress="return validarLetras(event);">
+                                        <input type="text" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" maxlength="120" minlength="2" id="c_calle" class="form-control" name="calle2" placeholder="Calle" onkeypress="return validarLetras(event);">
                                         <div id="calle2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-3" style="padding-right:5px; padding-left:7px; padding-bottom:0;">
                                     <div class="">
                                         <label class="sr-only" for="c_ext">No. Ext.</label>
-                                        <input type="number" id="c_ext" class="form-control" name="ext2" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
+                                        <input type="text" id="c_ext" pattern="^[0-9]+" onkeyup="this.className = 'campo';" maxlength="15" minlength="2" class="form-control" name="ext2" placeholder="No. Ext." onkeypress="return soloNumeros(event);" required>
                                         <div id="ext2-status" class="status-fields"></div>
                                     </div>
                                 </div>
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="number" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
+                                        <input type="text" pattern="^[0-9]+" onkeyup="this.className = 'campo';" maxlength="50" minlength="2" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
                                         <div id="int2-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -339,12 +438,12 @@
                             <div class="row">
                                 <div class="form-group col-6 ">
                                     <label class="sr-only" for="c_col"> Colonia</label>
-                                    <input type="text" id="c_col" class="form-control" name="colonia2" placeholder="Colonia" onkeypress="return validarLetras(event);">
+                                    <input type="text" id="c_col" pattern="[A-Za-z-áéíóú\s]+" onkeyup="this.className = 'campo';" maxlength="100" minlength="2" class="form-control" name="colonia2" placeholder="Colonia" onkeypress="return validarLetras(event);" required>
                                     <div id="colonia2-status" class="status-fields"></div>
                                 </div>
 
                                 <div class="col-6 form-group" style="padding-left:7px;">
-                                    <select class="technofum-form" name="municipio2" placeholder="Municipio">
+                                    <select class="technofum-form" name="municipio2" placeholder="Municipio" required>
                                         <option value="">Municipio</option>
                                         <option value="Monterrey">Monterrey</option>
                                         <option value="Guadalupe">Guadalupe</option>
@@ -364,7 +463,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="c_message" name="mensaje2" rows="3" placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" maxlength="500" minlength="5" onkeyup="this.className = 'campo';" id="c_message" name="mensaje2" rows="3" placeholder="Mensaje" required></textarea>
                                         <div id="mensaje2-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -379,12 +478,11 @@
                                                 <div id="servicio-status"></div>
                                             </div>-->
                             <input type="hidden" name="ajax2">
-                            <input type="button" value="Solicitar Promoción" id="btn-ajax2" class="btn-enviar-cotizar">
+                            <input type="submit" value="Solicitar Promoción" id="btn-ajax2" class="btn-enviar-cotizar">
                             <br> <br>
                         </div>
                     </form>
-                    <!-- www.123formbuilder.com script begins here -->
-                    <!-- www.123formbuilder.com script begins here <iframe allowTransparency="true" style="min-height:300px; height:inherit; overflow:auto;" width="100%" id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0" src="//www.123formbuilder.com/my-contact-form-4824895.html"><p>Your browser does not support iframes. The contact form cannot be displayed. Please use another contact method (phone, fax etc)</p></iframe><!-- www.123formbuilder.com script ends here -->
+     
 
                     <!----------------Formulario 2------------------>
                 </div>
@@ -626,8 +724,6 @@
     <script>
         AOS.init();
     </script>
-
-
 
 </body>
 

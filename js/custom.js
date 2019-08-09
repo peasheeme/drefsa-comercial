@@ -1,4 +1,8 @@
-
+$(".rotate").textrotator({
+    animation: "dissolve",
+    separator: "|",
+    speed: 2000
+});
 
 /********************función de botones************************ */
 $(function(){
