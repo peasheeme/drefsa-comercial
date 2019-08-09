@@ -116,10 +116,10 @@ if(isset($_POST)){
 	}elseif($error == "ok"){
 
 		//asunto
-		$asunto="10% Control de plaga Residencial";
+		$asunto="10% Primer servicio";
 
 		//destinatario
-		$destino="juan_27angel@hotmail.com";
+		$destino="info@drenajesyfugas.com, julian.fernandez@3e-digital.com";
 
 		//cabeceras para validar el formato HTML
 		$headers = 'MIME-Version: 1.0' . "\r\n";
@@ -166,7 +166,7 @@ if(isset($_POST)){
 		$envio = mail($destino, $asunto, $contenido, $headers);
 
 		if($envio){
-			header("Location:gracias.html");
+			header("Location:thanks.php");
 			//Enviando autorespuesta
 			$pwf_header = "info@drenajesyfugas.com\n"
 			."Reply-to: info@drenajesyfugas.com \n";
@@ -286,10 +286,10 @@ if(isset($_POST)){
 	}elseif($error == "ok"){
 
 		//asunto
-		$asunto="10% Control de plaga Residencial";
+		$asunto="10% Primer servicio";
 
 		//destinatario
-		$destino="juan_27angel@hotmail.com";
+		$destino="info@drenajesyfugas.com";
 
 		//cabeceras para validar el formato HTML
 		$headers = 'MIME-Version: 1.0' . "\r\n";
@@ -336,7 +336,7 @@ if(isset($_POST)){
 		$envio = mail($destino, $asunto, $contenido, $headers);
 
 		if($envio){
-			header("Location:gracias.html");
+			header("Location:thanks.php");
 			//Enviando autorespuesta
 			$pwf_header = "info@drenajesyfugas.com\n"
 			."Reply-to: info@drenajesyfugas.com \n";
@@ -474,10 +474,10 @@ if(isset($_POST['ajax2'])){
 
 	else{
 		//asunto
-		$asunto="10% Control de plaga Residencial";
+		$asunto="10% Primer servicio";
 
 		//destinatario
-		$destino="juan_27angel@hotmail.com";
+		$destino="info@drenajesyfugas.com";
 
 		//cabeceras para validar el formato HTML
 		$headers = 'MIME-Version: 1.0' . "\r\n";
