@@ -109,13 +109,13 @@
                     <div class="row justify-content-center oculto-1" style="padding: 30px 0 70px 0;">
                         <!--m-300-->
                         <div class="row justify-content-xs-center ">
-                            <h3 class="white"> Llámanos a los teléfonos:</h3>
+                            <h5 class="white"> Llámanos a los teléfonos:</h5>
                         </div>
                         <div class="row justify-content-center ">
 
 
                             <a href="tel:8183720322"><button class="btn-1">
-                                    <i class="fas fa-phone"></i> span(81) 8372-0322 </button>
+                                    <i class="fas fa-phone"></i> (81) 8372-0322 </button>
                             </a>
                             <a href="tel:8183740919"> <button class="btn-1"><i class="fas fa-phone"></i> (81)
                                     8374-0919</button>
