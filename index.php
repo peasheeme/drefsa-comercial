@@ -130,9 +130,7 @@
                             <strong> ¡PROGRAMA TU SERVICIO AQUÍ! </strong>
                         </h4 > <H6 class="white" >PARA OBTENER LA PROMOCIÓN!</H6>
                         <img class="img-desc mostrar-1" src="images/desc4.png" alt="">
-                        <h5 class="white  mt-20">
-                          1. Selecciona el tipo servicio que buscas
-</h5>
+                        <h5 class="white  mt-20" id="type-service">1. Selecciona el tipo servicio que buscas</h5>
                         <div class="row justify-content-center">
                          
                                 <button id="btn-10" class="btn-1" type="button">Empresarial</button>
@@ -187,11 +185,6 @@
 
                             elseif ($error == "ext") :
                                 echo "<h5 style='color:red;'>Número exterior no válido</h5>";
-
-
-                            elseif ($error == "int") :
-                                echo "<h5 style='color:red;'>Número interior no válido</h5>";
-
 
                             elseif ($error == "colonia") :
                                 echo "<h5 style='color:red;'>Colonia no válida</h5>";
@@ -279,7 +272,7 @@
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="text" id="c_int" pattern="^[0-9]+" class="form-control" name="int" onkeyup="this.className = 'campo';" placeholder="No. Int." maxlength="50" minlength="2" required>
+                                        <input type="text" id="c_int" pattern="^[0-9]+" class="form-control" name="int" onkeyup="this.className = 'campo';" placeholder="No. Int." maxlength="50" minlength="2">
                                         <div id="int-status" class="status-fields"></div>
                                     </div>
                                 </div>
@@ -334,43 +327,43 @@
                     </form>
 
                     <!----------------Formulario 2------------------>
-                    <form action="mail/ajax.php" id="formulario-ajax2" method="post" role="form" style="display:none;">
+                    <form action="mail/ajax2.php" id="formulario-ajax2" method="post" role="form" style="display:none;">
                         <?php
 
                         if (isset($_GET['error2'])) :
-                            $error = $_GET['error2'];
+                            $error2 = $_GET['error2'];
 
-                            if ($error == "faltan_valores") :
+                            if ($error2 == "faltan_valores2") :
                                 echo "<h5  style='color:red;'>Porfavor, Introduce bien los datos</h5>";
 
-                            elseif ($error == "nombre2") :
+                            elseif($error2 == "Inténtelo de nuevo en unos momentos"):
+                                echo "<h5 style='color:red;'>Inténtelo de nuevo en unos momentos</h5>";
+
+                            elseif ($error2 == "nombre2") :
                                 echo "<h5 style='color:red;'>Nombre no válido</h5>";
 
-                            elseif ($error == "apellido2") :
+                            elseif ($error2 == "apellido2") :
                                 echo "<h5 style='color:red;'>Apellido no válido</h5>";
 
-                            elseif ($error == "email2") :
+                            elseif ($error2 == "email2") :
                                 echo "<h5 style='color:red;'>E-mail no válido</h5>";
 
-                            elseif ($error == "telefono2") :
+                            elseif ($error2 == "telefono2") :
                                 echo "<h5 style='color:red;'>Teléfono no válido</h5>";
 
-                            elseif ($error == "calle2") :
+                            elseif ($error2 == "calle2") :
                                 echo "<h5 style='color:red;'>Calle no válida</h5>";
 
-                            elseif ($error == "ext2") :
+                            elseif ($error2 == "ext2") :
                                 echo "<h5 style='color:red;'>Número exterior no válido</h5>";
 
-                            elseif ($error == "int2") :
-                                echo "<h5 style='color:red;'>Número interior no válido</h5>";
-
-                            elseif ($error == "colonia2") :
+                            elseif ($error2 == "colonia2") :
                                 echo "<h5 style='color:red;'>Colonia no válida</h5>";
 
-                            elseif ($error == "municipio2") :
+                            elseif ($error2 == "municipio2") :
                                 echo "<h5 style='color:red;'>Municipio no válido</h5>";
 
-                            elseif ($error == "mensaje2") :
+                            elseif ($error2 == "mensaje2") :
                                 echo "<h5 style='color:red;'>Mensaje no válido</h5>";
 
                             endif;
@@ -427,7 +420,7 @@
                                 <div class="col-3" style="padding-left:5px;">
                                     <div class="form-group">
                                         <label class="sr-only" for="c_int">No. Int </label>
-                                        <input type="text" pattern="^[0-9]+" onkeyup="this.className = 'campo';" maxlength="50" minlength="2" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);" required>
+                                        <input type="text" pattern="^[0-9]+" onkeyup="this.className = 'campo';" maxlength="50" minlength="2" id="c_int" class="form-control" name="int2" placeholder="No. Int." onkeypress="return soloNumeros(event);">
                                         <div id="int2-status" class="status-fields"></div>
                                     </div>
                                 </div>

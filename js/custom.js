@@ -9,14 +9,16 @@ $(function(){
 });
 
 $('#btn-10').click(function(){
-    $('#formulario-ajax').show("fast");
-    $('#formulario-ajax2').hide("swing");
+    $('#formulario-ajax').show('easeInQuad');
+    $('#formulario-ajax2').hide();
+    $('#type-service').text("2. Porfavor llena el formulario");
     document.getElementById('buttons-form').style.marginTop="-25px";
 });
 
 $('#btn-11').click(function(){
-    $('#formulario-ajax2').show("fast");
-    $('#formulario-ajax').hide("swing");
+    $('#formulario-ajax2').show('easeInQuad');
+    $('#formulario-ajax').hide();
+    $('#type-service').text("2. Porfavor llena el formulario");
     document.getElementById('buttons-form').style.marginTop="-25px";
 });
 

@@ -57,7 +57,7 @@
                           <!-- Text -->
                           <p class="card-text">Gracias por solicitar nuestro servicio Nos pondremos en contacto contigo lo antes posible.  Un correo de confirmación llegara a tu email.</p>
                           <!-- Button --> <br>
-                          <a href="index.html" class="btn-regresar2">Aceptar</a> <br><br><br>
+                          <a href="index.php" class="btn-regresar2">Aceptar</a> <br><br><br>
                       
                         </div>
                       
