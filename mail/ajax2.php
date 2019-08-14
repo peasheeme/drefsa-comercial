@@ -103,44 +103,44 @@ if(isset($_POST)){
 
 		//contenido del mensaje
 		$contenido='
-		<html>
-		<head></head>
-		<body>
-		<h3>'.$nombre.' ha solicitado el 20% en servicio de Residencial</h3>
+			<html>
+			<head></head>
+			<body>
+			<h3>'.$nombre.' ha solicitado el 20% en servicio de Residencial</h3>
 
-		<hr style="border:2px solid #A6060E;"/>
-		
-		
-		<p>'.$mensaje.' </p>
-		
-		<h3>Datos del cliente.</h3>
-		<ul>
-			<li><strong>Nombre: </strong> '.$nombre.'</li>
-			<li><strong>Apellido: </strong> '.$apellido.'</li>
-			<li><strong>E-mail: </strong> '.$email.'</li>
-			<li><strong>Teléfono: </strong> '.$telefono.'</li>
-			<li><strong>Calle: </strong> '.$calle.'</li>
-			<li><strong>No Exterior: </strong> '.$ext.'</li>
-			<li><strong>No Interior: </strong> '.$int.'</li>
-			<li><strong>Colonia: </strong> '.$colonia.'</li>
-			<li><strong>Municipio: </strong> '.$municipio.'</li>
+			<hr style="border:2px solid #A6060E;"/>
 			
-		</ul>
+			
+			<p>'.$mensaje.' </p>
+			
+			<h3>Datos del cliente.</h3>
+			<ul>
+				<li><strong>Nombre: </strong> '.$nombre.'</li>
+				<li><strong>Apellido: </strong> '.$apellido.'</li>
+				<li><strong>E-mail: </strong> '.$email.'</li>
+				<li><strong>Teléfono: </strong> '.$telefono.'</li>
+				<li><strong>Calle: </strong> '.$calle.'</li>
+				<li><strong>No Exterior: </strong> '.$ext.'</li>
+				<li><strong>No Interior: </strong> '.$int.'</li>
+				<li><strong>Colonia: </strong> '.$colonia.'</li>
+				<li><strong>Municipio: </strong> '.$municipio.'</li>
+				
+			</ul>
 
-		<br/>
-		<br/>
-		
+			<br/>
+			<br/>
+			
 
-		<hr style="border:2px solid #A6060E;"/>
-		</body>
-		</html>
+			<hr style="border:2px solid #A6060E;"/>
+			</body>
+			</html>
 		';
 
 		//enviar correo
 		$envio = mail($destino, $asunto, $contenido, $headers);
 
 		if($envio){
-			header("Location:../thanks.php");
+			header("Location:../gracias-residencial.php");
 			//Enviando autorespuesta
 			$pwf_header = "info@drenajesyfugas.com\n"
 			."Reply-to: info@drenajesyfugas.com \n";

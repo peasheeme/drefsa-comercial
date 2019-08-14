@@ -157,7 +157,7 @@ if(isset($_POST)){
 		$envio = mail($destino, $asunto, $contenido, $headers);
 
 		if($envio){
-			header("Location:../thanks.php");
+			header("Location:../gracias-empresa.php");
 			//Enviando autorespuesta
 			$pwf_header = "info@drenajesyfugas.com\n"
 			."Reply-to: info@drenajesyfugas.com \n";
